@@ -76,28 +76,51 @@
     <script src="./instalarapp.js"></script>
     <script src="./assets/js/spash.js"></script>
         <script src="./script.js"></script>
-     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Cuando la página cargue, añadimos la clase visible para hacer fade-in
-    document.body.classList.add('visible');
+   <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Añadir clase visible al cargar normalmente
+  document.body.classList.add('visible');
 
-    // Agregar evento click a todos los links para hacer fade-out antes de salir
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const href = this.href;
+  // Agregar evento click a todos los links
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Ignorar si:
+      // - Abre en nueva pestaña
+      // - Se usa ctrl/cmd click
+      // - Tiene download
+      if (
+        this.target === "_blank" ||
+        e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
+        this.hasAttribute('download')
+      ) {
+        return;
+      }
 
-        // Quitar la clase visible para hacer fade-out
-        document.body.classList.remove('visible');
+      // Ignorar anclas internas (por ejemplo, href="#seccion")
+      if (this.href.startsWith(window.location.href.split('#')[0] + '#')) {
+        return;
+      }
 
-        // Esperar a que termine la transición y cambiar de página
-        setTimeout(() => {
-          window.location.href = href;
-        }, 500); // duración debe coincidir con CSS
-      });
+      e.preventDefault();
+      const href = this.href;
+
+      // Quitar clase visible (fade-out)
+      document.body.classList.remove('visible');
+
+      // Esperar transición y redirigir
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
     });
   });
+});
+
+// Evento pageshow para restaurar cuando se vuelve con "atrás"
+window.addEventListener('pageshow', (event) => {
+  document.body.classList.add('visible');
+});
 </script>
+
 
 </body>
 
