@@ -1,129 +1,226 @@
 <!DOCTYPE html>
-<html lang="es">
+<html data-bs-theme="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Estados</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-        }
-        #buscador {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-        .estado {
-            display: inline-block;
-            padding: 10px 15px;
-            margin: 5px;
-            background: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .filtro {
-            display: none;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>restaurantapp</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/Diseño%20sin%20título%20(8).png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/Diseño%20sin%20título%20(8).png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/Diseño%20sin%20título%20(8).png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/Diseño%20sin%20título%20(8).png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/Diseño%20sin%20título%20(8).png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/Diseño%20sin%20título%20(8).png">
+    <link rel="icon" type="image/png" sizes="500x500" href="./assets/img/mks%20(9).png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <link rel="manifest" href="./manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="./assets/css/stylesweb.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
+    <div id="ad" class="ad">
+        <video src="https://menutechdeveloper.github.io/bddImg/assets/iconos/ad1.mp4" autoplay muted loop></video>
+    </div>
+    <div id="citys" class="citys"><input type="text" name="buscador" id="buscador" placeholder="Search..." />
+<div class="city">
+<a href="./cities.html?state=alabama"><button class="fc">Alabama</button></a>
+<a href="./cities.html?state=alaska"><button class="fc">Alaska</button></a>
+<a href="./cities.html?state=arizona"><button class="fc">Arizona</button></a>
+<a href="./cities.html?state=arkansas"><button class="fc">Arkansas</button></a>
+<a href="./cities.html?state=california"><button class="fc">California</button></a>
+<a href="./cities.html?state=colorado"><button class="fc">Colorado</button></a>
+<a href="./cities.html?state=connecticut"><button class="fc">Connecticut</button></a>
+<a href="./cities.html?state=delaware"><button class="fc">Delaware</button></a>
+<a href="./cities.html?state=florida"><button class="fc">Florida</button></a>
+<a href="./cities.html?state=georgia"><button class="fc">Georgia</button></a>
+<a href="./cities.html?state=hawaii"><button class="fc">Hawaii</button></a>
+<a href="./cities.html?state=idaho"><button class="fc">Idaho</button></a>
+<a href="./cities.html?state=illinois"><button class="fc">Illinois</button></a>
+<a href="./cities.html?state=indiana"><button class="fc">Indiana</button></a>
+<a href="./cities.html?state=iowa"><button class="fc">Iowa</button></a>
+<a href="./cities.html?state=kansas"><button class="fc">Kansas</button></a>
+<a href="./cities.html?state=kentucky"><button class="fc">Kentucky</button></a>
+<a href="./cities.html?state=louisiana"><button class="fc">Louisiana</button></a>
+<a href="./cities.html?state=maine"><button class="fc">Maine</button></a>
+<a href="./cities.html?state=maryland"><button class="fc">Maryland</button></a>
+<a href="./cities.html?state=massachusetts"><button class="fc">Massachusetts</button></a>
+<a href="./cities.html?state=michigan"><button class="fc">Michigan</button></a>
+<a href="./cities.html?state=minnesota"><button class="fc">Minnesota</button></a>
+<a href="./cities.html?state=mississippi"><button class="fc">Mississippi</button></a>
+<a href="./cities.html?state=missouri"><button class="fc">Missouri</button></a>
+<a href="./cities.html?state=montana"><button class="fc">Montana</button></a>
+<a href="./cities.html?state=nebraska"><button class="fc">Nebraska</button></a>
+<a href="./cities.html?state=nevada"><button class="fc">Nevada</button></a>
+<a href="./cities.html?state=new_hampshire"><button class="fc">New Hampshire</button></a>
+<a href="./cities.html?state=new_jersey"><button class="fc">New Jersey</button></a>
+<a href="./cities.html?state=new_mexico"><button class="fc">New Mexico</button></a>
+<a href="./cities.html?state=new_york"><button class="fc">New York</button></a>
+<a href="./cities.html?state=north_carolina"><button class="fc">North Carolina</button></a>
+<a href="./cities.html?state=north_dakota"><button class="fc">North Dakota</button></a>
+<a href="./cities.html?state=ohio"><button class="fc">Ohio</button></a>
+<a href="./cities.html?state=oklahoma"><button class="fc">Oklahoma</button></a>
+<a href="./cities.html?state=oregon"><button class="fc">Oregon</button></a>
+<a href="./cities.html?state=pennsylvania"><button class="fc">Pennsylvania</button></a>
+<a href="./cities.html?state=rhode_island"><button class="fc">Rhode Island</button></a>
+<a href="./cities.html?state=south_carolina"><button class="fc">South Carolina</button></a>
+<a href="./cities.html?state=south_dakota"><button class="fc">South Dakota</button></a>
+<a href="./cities.html?state=tennessee"><button class="fc">Tennessee</button></a>
+<a href="./cities.html?state=texas"><button class="fc">Texas</button></a>
+<a href="./cities.html?state=utah"><button class="fc">Utah</button></a>
+<a href="./cities.html?state=vermont"><button class="fc">Vermont</button></a>
+<a href="./cities.html?state=virginia"><button class="fc">Virginia</button></a>
+<a href="./cities.html?state=washington"><button class="fc">Washington</button></a>
+<a href="./cities.html?state=west_virginia"><button class="fc">West Virginia</button></a>
+<a href="./cities.html?state=wisconsin"><button class="fc">Wisconsin</button></a>
+<a href="./cities.html?state=wyoming"><button class="fc">Wyoming</button></a>
+</div>
 
-<h2>Selecciona un Estado</h2>
-<input type="text" id="buscador" placeholder="Buscar por nombre o ZIP code...">
-
-<div id="listaEstados"></div>
-
+<!-- SOLO AÑADIDO: ZIPs por estado + buscador por nombre/ZIP -->
 <script>
-// ==================== LISTA DE ESTADOS CON ZIP CODES ====================
-// PUEDES AGREGAR MÁS ZIP CODES A CADA ESTADO O AÑADIR NUEVOS ESTADOS EN EL FUTURO
-const estados = [
-    { nombre: "Alabama", zips: ["35004", "35005", "35006", "35007", "35010"] },
-    { nombre: "Alaska", zips: ["99501", "99502", "99503", "99504", "99505"] },
-    { nombre: "Arizona", zips: ["85001", "85002", "85003", "85004", "85005"] },
-    { nombre: "Arkansas", zips: ["71601", "71602", "71603", "71611", "71612"] },
-    { nombre: "California", zips: ["90001", "90002", "90003", "90004", "90005"] },
-    { nombre: "Colorado", zips: ["80001", "80002", "80003", "80004", "80005"] },
-    { nombre: "Connecticut", zips: ["06001", "06002", "06006", "06010", "06011"] },
-    { nombre: "Delaware", zips: ["19701", "19702", "19703", "19706", "19707"] },
-    { nombre: "Florida", zips: ["32003", "32004", "32006", "32007", "32008"] },
-    { nombre: "Georgia", zips: ["30002", "30003", "30004", "30005", "30006"] },
-    { nombre: "Hawaii", zips: ["96701", "96703", "96704", "96705", "96706"] },
-    { nombre: "Idaho", zips: ["83201", "83202", "83203", "83204", "83205"] },
-    { nombre: "Illinois", zips: ["60001", "60002", "60004", "60005", "60006"] },
-    { nombre: "Indiana", zips: ["46001", "46011", "46012", "46013", "46014"] },
-    { nombre: "Iowa", zips: ["50001", "50002", "50003", "50005", "50006"] },
-    { nombre: "Kansas", zips: ["66002", "66006", "66007", "66008", "66010"] },
-    { nombre: "Kentucky", zips: ["40003", "40004", "40006", "40007", "40008"] },
-    { nombre: "Louisiana", zips: ["70001", "70002", "70003", "70004", "70005"] },
-    { nombre: "Maine", zips: ["03901", "03902", "03903", "03904", "03905"] },
-    { nombre: "Maryland", zips: ["20601", "20602", "20603", "20604", "20606"] },
-    { nombre: "Massachusetts", zips: ["01001", "01002", "01003", "01004", "01005"] },
-    { nombre: "Michigan", zips: ["48001", "48002", "48003", "48004", "48005"] },
-    { nombre: "Minnesota", zips: ["55001", "55002", "55003", "55004", "55005"] },
-    { nombre: "Mississippi", zips: ["38601", "38602", "38603", "38606", "38609"] },
-    { nombre: "Missouri", zips: ["63001", "63005", "63006", "63010", "63011"] },
-    { nombre: "Montana", zips: ["59001", "59002", "59003", "59004", "59005"] },
-    { nombre: "Nebraska", zips: ["68001", "68002", "68003", "68004", "68005"] },
-    { nombre: "Nevada", zips: ["88901", "88905", "89001", "89002", "89003"] },
-    { nombre: "New Hampshire", zips: ["03031", "03032", "03033", "03034", "03036"] },
-    { nombre: "New Jersey", zips: ["07001", "07002", "07003", "07004", "07005"] },
-    { nombre: "New Mexico", zips: ["87001", "87002", "87004", "87005", "87006"] },
-    { nombre: "New York", zips: ["10001", "10002", "10003", "10004", "10005"] },
-    { nombre: "North Carolina", zips: ["27006", "27007", "27009", "27010", "27011"] },
-    { nombre: "North Dakota", zips: ["58001", "58002", "58003", "58004", "58005"] },
-    { nombre: "Ohio", zips: ["43001", "43002", "43003", "43004", "43005"] },
-    { nombre: "Oklahoma", zips: ["73001", "73002", "73003", "73004", "73005"] },
-    { nombre: "Oregon", zips: ["97001", "97002", "97003", "97004", "97005"] },
-    { nombre: "Pennsylvania", zips: ["15001", "15003", "15004", "15005", "15006"] },
-    { nombre: "Rhode Island", zips: ["02801", "02802", "02804", "02806", "02807"] },
-    { nombre: "South Carolina", zips: ["29001", "29002", "29003", "29006", "29009"] },
-    { nombre: "South Dakota", zips: ["57001", "57002", "57003", "57004", "57005"] },
-    { nombre: "Tennessee", zips: ["37010", "37011", "37012", "37013", "37014"] },
-    { nombre: "Texas", zips: ["73301", "75001", "75002", "75006", "75007"] },
-    { nombre: "Utah", zips: ["84001", "84002", "84003", "84004", "84005"] },
-    { nombre: "Vermont", zips: ["05001", "05009", "05030", "05031", "05032"] },
-    { nombre: "Virginia", zips: ["20101", "20102", "20103", "20104", "20105"] },
-    { nombre: "Washington", zips: ["98001", "98002", "98003", "98004", "98005"] },
-    { nombre: "West Virginia", zips: ["24701", "24712", "24714", "24715", "24716"] },
-    { nombre: "Wisconsin", zips: ["53001", "53002", "53003", "53004", "53005"] },
-    { nombre: "Wyoming", zips: ["82001", "82002", "82003", "82005", "82006"] }
-];
+  // ================================
+  // 📌 MAPA DE ZIP CODES POR ESTADO
+  //    PUEDES AGREGAR MÁS ZIP CODES EN CADA ARRAY
+  // ================================
+  const stateZips = {
+    alabama: ["35004","35005","35006","35007","35010"],
+    alaska: ["99501","99502","99503","99504","99505"],
+    arizona: ["85001","85002","85003","85004","85005"],
+    arkansas: ["71601","71602","71603","71611","71612"],
+    california: ["90001","90002","90003","90004","90005"],
+    colorado: ["80001","80002","80003","80004","80005"],
+    connecticut: ["06001","06002","06006","06010","06011"],
+    delaware: ["19701","19702","19703","19706","19707"],
+    florida: ["32003","32004","32006","32007","32008"],
+    georgia: ["30002","30003","30004","30005","30006"],
+    hawaii: ["96701","96703","96704","96705","96706"],
+    idaho: ["83201","83202","83203","83204","83205"],
+    illinois: ["60001","60002","60004","60005","60006"],
+    indiana: ["46001","46011","46012","46013","46014"],
+    iowa: ["50001","50002","50003","50005","50006"],
+    kansas: ["66002","66006","66007","66008","66010"],
+    kentucky: ["40003","40004","40006","40007","40008"],
+    louisiana: ["70001","70002","70003","70004","70005"],
+    maine: ["03901","03902","03903","03904","03905"],
+    maryland: ["20601","20602","20603","20604","20606"],
+    massachusetts: ["01001","01002","01003","01004","01005"],
+    michigan: ["48001","48002","48003","48004","48005"],
+    minnesota: ["55001","55002","55003","55004","55005"],
+    mississippi: ["38601","38602","38603","38606","38609"],
+    missouri: ["63001","63005","63006","63010","63011"],
+    montana: ["59001","59002","59003","59004","59005"],
+    nebraska: ["68001","68002","68003","68004","68005"],
+    nevada: ["88901","88905","89001","89002","89003"],
+    new_hampshire: ["03031","03032","03033","03034","03036"],
+    new_jersey: ["07001","07002","07003","07004","07005"],
+    new_mexico: ["87001","87002","87004","87005","87006"],
+    new_york: ["10001","10002","10003","10004","10005"],
+    north_carolina: ["27006","27007","27009","27010","27011"],
+    north_dakota: ["58001","58002","58003","58004","58005"],
+    ohio: ["43001","43002","43003","43004","43005"],
+    oklahoma: ["73001","73002","73003","73004","73005"],
+    oregon: ["97001","97002","97003","97004","97005"],
+    pennsylvania: ["15001","15003","15004","15005","15006"],
+    rhode_island: ["02801","02802","02804","02806","02807"],
+    south_carolina: ["29001","29002","29003","29006","29009"],
+    south_dakota: ["57001","57002","57003","57004","57005"],
+    tennessee: ["37010","37011","37012","37013","37014"],
+    texas: ["73301","75001","75002","75006","75007"],
+    utah: ["84001","84002","84003","84004","84005"],
+    vermont: ["05001","05009","05030","05031","05032"],
+    virginia: ["20101","20102","20103","20104","20105"],
+    washington: ["98001","98002","98003","98004","98005"],
+    west_virginia: ["24701","24712","24714","24715","24716"],
+    wisconsin: ["53001","53002","53003","53004","53005"],
+    wyoming: ["82001","82002","82003","82005","82006"]
+    // ⚠️ AQUI PUEDES AGREGAR MÁS ESTADOS O MÁS ZIP CODES POR ESTADO
+  };
 
-// ==================== GENERAR BOTONES ====================
-const contenedor = document.getElementById("listaEstados");
-estados.forEach(estado => {
-    const btn = document.createElement("a");
-    btn.classList.add("estado");
-    btn.textContent = estado.nombre;
-    btn.dataset.zips = estado.zips.join(",");
-    btn.href = "#"; // aquí iría el enlace a la pantalla de ciudades
-    contenedor.appendChild(btn);
+  // Inyecta data-zip en cada botón según el estado del href (NO CAMBIA TUS ENLACES)
+  document.querySelectorAll('.city a').forEach(a => {
+    const btn = a.querySelector('.fc');
+    if (!btn) return;
+    try {
+      const url = new URL(a.getAttribute('href'), window.location.href);
+      const slug = new URLSearchParams(url.search).get('state'); // p.ej. "vermont"
+      if (slug && stateZips[slug]) {
+        btn.dataset.zip = stateZips[slug].join(',');
+      } else {
+        btn.dataset.zip = '';
+      }
+    } catch (e) {
+      btn.dataset.zip = '';
+    }
+  });
+
+  // Buscador por nombre de estado O ZIP (NO MODIFICA TUS ESTILOS NI RUTAS)
+  document.addEventListener("keyup", e => {
+    if (e.target.matches("#buscador")) {
+      if (e.key === "Escape") e.target.value = "";
+      const filtro = e.target.value.toLowerCase();
+      document.querySelectorAll(".fc").forEach(btn => {
+        const texto = btn.textContent.toLowerCase();
+        const zips = (btn.dataset.zip || "").toLowerCase();
+        (texto.includes(filtro) || zips.includes(filtro) || filtro === "")
+          ? btn.classList.remove("filtro")
+          : btn.classList.add("filtro");
+      });
+    }
+  });
+</script>
+
+<script src="./ssets/js/filtro.js"></script></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/filtro.js"></script>
+    <script src="./instalarapp.js"></script>
+    <script src="./assets/js/spash.js"></script>
+        <script src="./script.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Añadir clase visible al cargar normalmente
+  document.body.classList.add('visible');
+
+  // Agregar evento click a todos los links
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Ignorar si:
+      // - Abre en nueva pestaña
+      // - Se usa ctrl/cmd click
+      // - Tiene download
+      if (
+        this.target === "_blank" ||
+        e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
+        this.hasAttribute('download')
+      ) {
+        return;
+      }
+
+      // Ignorar anclas internas (por ejemplo, href="#seccion")
+      if (this.href.startsWith(window.location.href.split('#')[0] + '#')) {
+        return;
+      }
+
+      e.preventDefault();
+      const href = this.href;
+
+      // Quitar clase visible (fade-out)
+      document.body.classList.remove('visible');
+
+      // Esperar transición y redirigir
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    });
+  });
 });
 
-// ==================== BUSCADOR ====================
-document.addEventListener("keyup", e => {
-    if (e.target.matches("#buscador")) {
-        if (e.key === "Escape") e.target.value = "";
-        const filtro = e.target.value.toLowerCase();
-
-        document.querySelectorAll(".estado").forEach(btn => {
-            const nombre = btn.textContent.toLowerCase();
-            const zips = btn.dataset.zips.toLowerCase();
-
-            (nombre.includes(filtro) || zips.includes(filtro))
-                ? btn.classList.remove("filtro")
-                : btn.classList.add("filtro");
-        });
-    }
+// Evento pageshow para restaurar cuando se vuelve con "atrás"
+window.addEventListener('pageshow', (event) => {
+  document.body.classList.add('visible');
 });
 </script>
 
 </body>
+
 </html>
 
