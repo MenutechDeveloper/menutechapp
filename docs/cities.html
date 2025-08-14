@@ -29,52 +29,34 @@
         </div>
 
         <script>
-            // Datos de estados y sus ciudades con ZIP codes
+            // DATOS DE CIUDADES CON MÚLTIPLES ZIP CODES
             const statesCities = {
-                "texas": [
-                    { name: "Houston", zip: "77001" },
-                    { name: "San Antonio", zip: "78201" },
-                    { name: "Dallas", zip: "75201" },
-                    { name: "Austin", zip: "73301" },
-                    { name: "Fort Worth", zip: "76101" },
-                    { name: "El Paso", zip: "79901" },
-                    { name: "Arlington", zip: "76001" }
-                ],
-                "florida": [
-                    { name: "Miami", zip: "33101" },
-                    { name: "Orlando", zip: "32801" },
-                    { name: "Tampa", zip: "33601" },
-                    { name: "Jacksonville", zip: "32099" },
-                    { name: "Tallahassee", zip: "32301" },
-                    { name: "Fort Lauderdale", zip: "33301" },
-                    { name: "St. Petersburg", zip: "33701" },
-                    { name: "Hialeah", zip: "33002" },
-                    { name: "Cape Coral", zip: "33904" },
-                    { name: "Pembroke Pines", zip: "33028" }
-                ],
                 "california": [
-                    { name: "Los Angeles", zip: "90001" },
-                    { name: "San Diego", zip: "92101" },
-                    { name: "San Jose", zip: "95112" },
-                    { name: "San Francisco", zip: "94102" },
-                    { name: "Fresno", zip: "93650" },
-                    { name: "Sacramento", zip: "94203" },
-                    { name: "Long Beach", zip: "90802" },
-                    { name: "Oakland", zip: "94601" },
-                    { name: "Bakersfield", zip: "93301" },
-                    { name: "Anaheim", zip: "92801" }
+                    { name: "Los Angeles", zip: ["90001", "90002", "90003", "90004", "90005"] },
+                    { name: "San Diego", zip: ["92101", "92102", "92103", "92104", "92105"] },
+                    { name: "San Jose", zip: ["95110", "95111", "95112", "95113", "95116"] },
+                    { name: "San Francisco", zip: ["94102", "94103", "94104", "94105", "94107"] },
+                    { name: "Fresno", zip: ["93650", "93701", "93702", "93703", "93704"] },
+                    // AQUÍ PUEDES AGREGAR MÁS CIUDADES DE CALIFORNIA CON SUS ZIP CODES
+                ],
+                "texas": [
+                    { name: "Houston", zip: ["77001", "77002", "77003", "77004", "77005"] },
+                    { name: "San Antonio", zip: ["78201", "78202", "78203", "78204", "78205"] },
+                    { name: "Dallas", zip: ["75201", "75202", "75203", "75204", "75205"] },
+                    { name: "Austin", zip: ["73301", "73344", "78701", "78702", "78703"] },
+                    { name: "Fort Worth", zip: ["76101", "76102", "76103", "76104", "76105"] },
+                    // AQUÍ PUEDES AGREGAR MÁS CIUDADES DE TEXAS CON SUS ZIP CODES
                 ]
+                // AQUÍ PUEDES AGREGAR MÁS ESTADOS CON SUS CIUDADES Y ZIP CODES
             };
 
-            // Obtener el estado desde URL (?state=texas)
+            // OBTENER EL ESTADO DESDE URL (?state=california)
             const params = new URLSearchParams(window.location.search);
             const state = params.get('state');
 
-            // Referencias DOM
             const heading = document.getElementById('heading');
             const container = document.getElementById('cities-list');
 
-            // Validar estado y mostrar lista de ciudades
             if (!state || !statesCities[state]) {
                 heading.textContent = "State not found";
             } else {
@@ -87,9 +69,9 @@
 
                     const button = document.createElement('button');
                     button.className = 'fc';
-                    button.dataset.zip = cityObj.zip; // ZIP oculto
+                    button.dataset.zip = cityObj.zip.join(","); // GUARDAR TODOS LOS ZIPS
 
-                    // Formato bonito para mostrar
+                    // MOSTRAR NOMBRE BONITO
                     button.textContent = cityObj.name
                         .replace(/([a-z])([A-Z])/g, '$1 $2')
                         .split(/[\s_-]+/)
@@ -101,17 +83,19 @@
                 });
             }
 
-            // Buscador por nombre o ZIP
+            // BUSCADOR QUE REVISA TODOS LOS ZIPS
             document.addEventListener("keyup", e => {
                 if (e.target.matches("#buscador")) {
                     if (e.key === "Escape") e.target.value = "";
 
+                    const filtro = e.target.value.toLowerCase();
+
                     document.querySelectorAll(".fc").forEach(btn => {
                         const texto = btn.textContent.toLowerCase();
-                        const zip = btn.dataset.zip.toLowerCase();
-                        const filtro = e.target.value.toLowerCase();
+                        const zips = btn.dataset.zip.split(",");
+                        const matchZip = zips.some(zip => zip.toLowerCase().includes(filtro));
 
-                        (texto.includes(filtro) || zip.includes(filtro))
+                        (texto.includes(filtro) || matchZip)
                             ? btn.classList.remove("filtro")
                             : btn.classList.add("filtro");
                     });
@@ -156,6 +140,7 @@
     </script>
 </body>
 </html>
+
 
 
 
